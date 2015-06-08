@@ -9,5 +9,5 @@ app = bottle.default_app()
 The command to run the app with the Python agent is:
 
 ```
-NEW_RELIC_CONFIG_FILE=newrelic.ini newrelic-admin run-program gunicorn -b :8080 bottle_app:app
+NEW_RELIC_CONFIG_FILE=newrelic.ini newrelic-admin run-program gunicorn bottle_app:app
 ```
