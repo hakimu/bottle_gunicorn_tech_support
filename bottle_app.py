@@ -1,9 +1,10 @@
 import bottle
-from bottle import route, run, template
+app = application = bottle.Bottle()
 
-@route('/hello/<name>')
+@app.route('/hello/<name>')
 def index(name):
-	return template('<b>Hello {{name}}</b>!', name=name)
+	return "Hello"
+	#return template('<b>Hello {{name}}</b>!', name=name)
 
-app = bottle.default_app()
-
+if __name__ == '__main__':
+	app.run()
